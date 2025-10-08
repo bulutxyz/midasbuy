@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>PUBG Mobile — Buy UC</title>
   <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -46,7 +49,7 @@
       <div class="hero-right">
         <!-- Görsel placeholder: siz hero görsellerini ekleyebilirsiniz -->
         <div class="geo-pill">
-          <span>EN</span> <span class="dot"></span> <span>İzmir</span>
+          <span>BAE</span> <span class="dot"></span> <span>DUBAI</span>
         </div>
       </div>
     </div>
@@ -514,6 +517,53 @@
       if (e.target === this) {
         closePaymentModal();
       }
+    });
+
+    // Mobil touch optimizasyonu
+    function addTouchSupport() {
+      // Tüm paket itemları için touch event'leri
+      const packageItems = document.querySelectorAll('.item');
+      packageItems.forEach(item => {
+        // Touch start - aktif görünüm
+        item.addEventListener('touchstart', function() {
+          this.style.transform = 'scale(0.98)';
+        }, { passive: true });
+        
+        // Touch end - normal görünüm
+        item.addEventListener('touchend', function() {
+          setTimeout(() => {
+            this.style.transform = '';
+          }, 150);
+        }, { passive: true });
+      });
+      
+      // Butonlar için touch feedback
+      const buttons = document.querySelectorAll('button, .enter-address-btn');
+      buttons.forEach(button => {
+        button.addEventListener('touchstart', function() {
+          this.style.opacity = '0.8';
+        }, { passive: true });
+        
+        button.addEventListener('touchend', function() {
+          setTimeout(() => {
+            this.style.opacity = '';
+          }, 150);
+        }, { passive: true });
+      });
+    }
+
+    // Sayfa yüklendiğinde touch desteği ekle
+    document.addEventListener('DOMContentLoaded', addTouchSupport);
+
+    // Mobil klavye için input focus optimizasyonu
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        // Mobilde klavye açıldığında scroll problemi çözümü
+        setTimeout(() => {
+          this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 300);
+      });
     });
 
     function processPayment() {
