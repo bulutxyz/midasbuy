@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PUBG Mobile — Buy UC</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Üst marka/başlık -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="mıdasbuy.png" alt="Midas Buy" class="brand-logo" />
+      </div>
+      <nav class="tabs" aria-label="Main Tabs">
+        <button class="tab active" aria-current="page">PURCHASE</button>
+        <button class="tab" disabled>REDEEM</button>
+        <button class="tab" disabled>SHOP</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Oyun başlığı + kullanıcı kartı (placeholder görselli arka plan) -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <!-- Hero sol: Oyun başlığı -->
+      <div class="hero-left">
+        <div class="game-header">
+          <img src="pubg.png" alt="PUBG Mobile" class="game-icon" />
+          <div class="game-title">
+            <h1>PUBG MOBILE</h1>
+            <span class="pill solid">Official</span>
+            <span class="pill subscribed">Subscribed</span>
+          </div>
+        </div>
+        <div class="user-meta">
+          <div class="user-row">
+            <span class="user-name"></span>
+            <span class="user-id"></span>
+          </div>
+          <div class="user-status">
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <!-- Görsel placeholder: siz hero görsellerini ekleyebilirsiniz -->
+        <div class="geo-pill">
+          <span>EN</span> <span class="dot"></span> <span>İzmir</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner/Duyuru kartı -->
+  <section class="container">
+    <div class="banner">
+      <div class="banner-left">
+        <!-- Sadece yer tutucu; karakter görselini siz ekleyebilirsiniz -->
+        <div class="banner-art"></div>
+      </div>
+      <div class="banner-right">
+        <div class="banner-text">
+          </div>
+    </div>
+  </section>
+
+  <!-- Filtreler -->
+  <section class="container filters">
+    <div class="filter-group">
+      <select id="paymentSelect">
+        <option value="card">PAYMENT CHANNELS</option>
+        <option value="mobile">Mobile</option>
+        <option value="code">Code</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <select id="currencySelect">
+        <option value="uc" selected>UC</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Form + Paket Grid -->
+  <main class="container layout">
+    <section class="content">
+      <form id="purchaseForm" class="purchase-form" autocomplete="off">
+        <div class="form-row">
+          <label for="playerId">Player ID</label>
+          <input id="playerId" name="playerId" type="text" placeholder="" required/>
+        </div>
+        <div class="grid" id="packagesGrid" aria-live="polite" aria-busy="false">
+          <!-- UC Paketleri başlangıç -->
+      
+          <div class="item" data-amount="60" data-bonus="0" data-price="0.89">
+            <div class="item-top">
+              <span class="tag popular">Popular</span>
+            </div>
+            <div class="item-art duo">
+              <img src="uc2.png" alt="UC art" class="art-left"/>
+              <img src="red.png" alt="Additional art" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              60
+            </h3>
+            <div class="price-current">0.89 USD</div>
+            <div class="price-old">0.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10.1%</span></div>
+          </div>
+      
+
+
+          <div class="item" data-amount="300" data-bonus="25" data-price="4.49">
+            <div class="item-top">
+              <span class="tag popular">Popular</span>
+            </div>
+            <div class="item-art duo">
+              <img src="300uc.png" alt="UC 300 + 25" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              300 + 25
+            </h3>
+            <div class="price-current">From 4.49 USD</div>
+            <div class="price-old">4.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10.0%</span></div>
+          </div>
+      
+
+          <div class="item" data-amount="600" data-bonus="60" data-price="8.99">
+            <div class="item-art duo">
+              <img src="660uc.png" alt="UC 600 + 60" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              600 + 60
+            </h3>
+            <div class="price-current">From 8.99 USD</div>
+            <div class="price-old">9.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10.01%</span></div>
+          </div>
+      
+          <div class="item" data-amount="1500" data-bonus="300" data-price="22.49">
+            <div class="item-art duo">
+              <img src="1500uc.png" alt="UC 1500 + 300" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              1500 + 300
+            </h3>
+            <div class="price-current">From 22.49 USD</div>
+            <div class="price-old">24.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10%</span></div>
+          </div>
+      
+          <div class="item" data-amount="3000" data-bonus="850" data-price="44.99">
+            <div class="item-art duo">
+              <img src="uc.png" alt="UC 3000 + 850" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              3000 + 850
+            </h3>
+            <div class="price-current">From 44.99 USD</div>
+            <div class="price-old">49.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10%</span></div>
+          </div>
+      
+          <div class="item" data-amount="6000" data-bonus="2100" data-price="89.99">
+            <div class="item-art duo">
+              <img src="uc.png" alt="UC 6000 + 2100" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              6000 + 2100
+            </h3>
+            <div class="price-current">From 89.99 USD</div>
+            <div class="price-old">99.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10%</span></div>
+          </div>
+      
+          <div class="item" data-amount="12000" data-bonus="4200" data-price="179.99">
+            <div class="item-art duo">
+              <img src="uc.png" alt="UC 12000 + 4200" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              12000 + 4200
+            </h3>
+            <div class="price-current">From 179.99 USD</div>
+            <div class="price-old">199.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10%</span></div>
+          </div>
+      
+          <div class="item" data-amount="18000" data-bonus="6300" data-price="269.99">
+            <div class="item-art duo">
+              <img src="uc.png" alt="UC 18000 + 6300" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              18000 + 6300
+            </h3>
+            <div class="price-current">269.99 USD</div>
+            <div class="price-old">299.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10%</span></div>
+          </div>
+      
+          <div class="item" data-amount="24000" data-bonus="8400" data-price="359.99">
+            <div class="item-art duo">
+              <img src="uc.png" alt="UC 24000 + 8400" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              24000 + 8400
+            </h3>
+            <div class="price-current">359.99 USD</div>
+            <div class="price-old">399.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10%</span></div>
+          </div>
+      
+          <div class="item" data-amount="30000" data-bonus="10500" data-price="449.99">
+            <div class="item-art duo">
+              <img src="uc.png" alt="UC 30000 + 10500" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              30000 + 10500
+            </h3>
+            <div class="price-current">449.99 USD</div>
+            <div class="price-old">499.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10%</span></div>
+          </div>
+      
+          <div class="item" data-amount="36000" data-bonus="12600" data-price="539.99">
+            <div class="item-art duo">
+              <img src="uc.png" alt="UC 36000 + 12600" class="art-left"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              36000 + 12600
+            </h3>
+            <div class="price-current">539.99 USD</div>
+            <div class="price-old">599.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10%</span></div>
+          </div>
+      
+          <div class="item" data-amount="60000" data-bonus="21000" data-price="899.99">
+            <div class="item-art duo">
+              <img src="uc.png" alt="UC 60000 + 21000" class="art-left"/>
+              <img src="red.png" alt="Ek görsel" class="art-right"/>
+            </div>
+            <h3 class="item-title">
+              <img src="ucsmall.png" alt="UC" class="uc-chip-icon" />
+              60000 + 21000
+            </h3>
+            <div class="price-current">899.99 USD</div>
+            <div class="price-old">999.99 USD</div>
+            <div class="item-bottom"><span class="discount-pill">-10%</span></div>
+          </div>
+      
+          <!-- UC Paketleri bitiş -->
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img src="mıdasbuy.png" alt="Midasbuy" />
+          </div>
+          <p>Midasbuy is the official recharge store by Tencent. Pay Safe, fast and fun at Midasbuy.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Follow us on</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><img src="FB.png" alt="Facebook" /></a>
+            <a href="#" class="social-icon"><img src="IG.png" alt="Instagram" /></a>
+            <a href="#" class="social-icon"><img src="X.png" alt="Twitter/X" /></a>
+            <a href="#" class="social-icon"><img src="YT.png" alt="YouTube" /></a>
+            <a href="#" class="social-icon"><img src="DC.png" alt="Discord" /></a>
+            <a href="#" class="social-icon"><img src="TT.png" alt="TikTok" /></a>
+            <a href="#" class="social-icon"><img src="RE.png" alt="Reddit" /></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Midasbuy Supports Payment Channels</h3>
+          <div class="payment-icons">
+            <img src="paypal.png" alt="PayPal" class="payment-icon" />
+            <img src="card.png" alt="Card" class="payment-icon" />
+            <img src="applepay.png" alt="Apple Pay" class="payment-icon" />
+            <img src="klama.jpg" alt="Klarna" class="payment-icon" />
+            <img src="tik.png" alt="Sofort" class="payment-icon" />
+            <img src="gpay.png" alt="Google Pay" class="payment-icon" />
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <div class="trustpilot">
+            <div class="trustpilot-logo">★ Trustpilot</div>
+            <div class="trustpilot-review">✏️ Leave a review</div>
+            <p>Takes less than one minute to share your purchase experience with us, so we can better serve you!</p>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact us</h3>
+          <p>If you need any help, please contact us by clicking "Customer Service" to get in touch with us.</p>
+          <button class="customer-service-btn">📧 Customer Service</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Payment Modal -->
+  <div id="paymentModal" class="payment-modal">
+    <div class="payment-modal-content">
+      <div class="payment-header">
+        <img src="mıdasbuy.png" alt="Midasbuy" class="payment-logo" />
+        <button class="close-modal" onclick="closePaymentModal()">&times;</button>
+      </div>
+      
+      <div class="payment-notice">
+        <p>You are purchasing the right to use the item(s) you select subject to the terms <a href="#">here</a>.</p>
+      </div>
+      
+      <div class="selected-package">
+        <img id="selectedPackageImage" src="uc.png" alt="UC Package" class="package-image" />
+        <div class="package-details">
+          <span id="selectedAmount">18000</span> + <span id="selectedBonus" class="bonus-text">6300</span>
+          <div class="total-text">Total: <span id="totalUC">24300</span> UC</div>
+        </div>
+        <button class="package-dropdown">▼</button>
+      </div>
+      
+      <div class="extra-section">
+        <div class="extra-header">
+          <span class="gift-icon">🎁</span> Extra for you:
+        </div>
+        <div class="extra-items">
+          <img src="uc.png" alt="Extra UC" class="extra-icon" />
+          <span class="extra-amount">6000</span>
+        </div>
+      </div>
+      
+      <div class="player-info">
+        <div class="info-row">
+          <span class="info-icon user-icon">👤</span>
+          <span class="info-label">Player ID:</span>
+          <span id="displayPlayerId" class="info-value">Yash22976(5678532278)</span>
+        </div>
+        
+        <div class="info-row">
+          <span class="info-icon billing-icon">💳</span>
+          <span class="info-label">Billing information:</span>
+          <span class="info-link">Enter city, state and Zip code ></span>
+        </div>
+        
+        <div class="info-row">
+          <span class="info-icon coupon-icon">🎫</span>
+          <span class="info-label">Coupon:</span>
+          <span class="info-link">No Available Coupon ></span>
+        </div>
+      </div>
+      
+      <div class="payment-section">
+        <h3>SELECT PAYMENT CHANNELS</h3>
+        <div class="payment-option selected">
+          <div class="payment-left">
+            <span class="vip-badge">VIP Extra Points</span>
+            <img src="card.png" alt="Card" class="payment-method-icon" />
+            <span class="payment-text">Credit/ Debit/ Prepaid Card</span>
+            <span class="points-badge">🏆 2 x Points</span>
+          </div>
+          <div class="payment-right">
+            <img src="card.png" alt="Visa" class="card-icon" />
+            <span class="card-count">+3</span>
+          </div>
+        </div>
+        
+        <div class="payment-help">
+          <p>Can't find the payment channels you want?</p>
+          <a href="#">Please click here for more payment options ></a>
+          <div class="additional-payments">
+            <img src="gpay.png" alt="Google Pay" />
+            <img src="applepay.png" alt="Apple Pay" />
+            <img src="klama.jpg" alt="Klarna" />
+          </div>
+        </div>
+      </div>
+      
+      <div class="payment-footer">
+        <div class="total-price">
+          <span id="finalPrice">269.99 USD</span>
+          <small>(including 0 USD in taxes)</small>
+        </div>
+        <button class="enter-address-btn" onclick="processPayment()">COMPLETE PAYMENT</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <h3>Processing Payment...</h3>
+      <p>Please wait while we process your payment</p>
+    </div>
+  </div>
+
+  <!-- Success Screen -->
+  <div id="successScreen" class="success-screen">
+    <div class="success-content">
+      <div class="success-icon">✓</div>
+      <h2>Payment Successful!</h2>
+      <p>Your UC has been added to your account</p>
+      <div class="success-details">
+        <div class="success-row">
+          <span>Player ID:</span>
+          <span id="successPlayerId">Yash22976</span>
+        </div>
+        <div class="success-row">
+          <span>UC Amount:</span>
+          <span id="successAmount">18000 + 6300 UC</span>
+        </div>
+        <div class="success-row">
+          <span>Total Paid:</span>
+          <span id="successPrice">269.99 USD</span>
+        </div>
+      </div>
+      <button class="success-btn" onclick="closeAllModals()">Continue</button>
+    </div>
+  </div>
+
+  <script>
+    let selectedPackage = null;
+
+    // UC paketlerine tıklama event'i ekle
+    document.addEventListener('DOMContentLoaded', function() {
+      const packageItems = document.querySelectorAll('.item');
+      packageItems.forEach(item => {
+        item.addEventListener('click', function() {
+          // Önceki seçimi kaldır
+          packageItems.forEach(pkg => pkg.classList.remove('selected'));
+          // Yeni seçimi ekle
+          this.classList.add('selected');
+          
+          // Paket bilgilerini al
+          const amount = this.getAttribute('data-amount');
+          const bonus = this.getAttribute('data-bonus');
+          const price = this.getAttribute('data-price');
+          
+          selectedPackage = {
+            amount: amount,
+            bonus: bonus,
+            price: price,
+            total: parseInt(amount) + parseInt(bonus)
+          };
+          
+          // Ödeme modal'ını aç
+          openPaymentModal();
+        });
+      });
+    });
+
+    function openPaymentModal() {
+      if (!selectedPackage) return;
+      
+      // Player ID'yi al
+      const playerId = document.getElementById('playerId').value || 'Yash22976(5678532278)';
+      
+      // Fiyatı düzelt - virgülü kaldır ve USD ekle
+      let price = selectedPackage.price;
+      if (price.includes(',')) {
+        // Türk formatından (33,99) Amerikan formatına (33.99) çevir
+        price = price.replace(',', '.');
+      }
+      
+      // Modal bilgilerini güncelle
+      document.getElementById('selectedAmount').textContent = selectedPackage.amount;
+      document.getElementById('selectedBonus').textContent = selectedPackage.bonus;
+      document.getElementById('totalUC').textContent = selectedPackage.total;
+      document.getElementById('displayPlayerId').textContent = playerId;
+      document.getElementById('finalPrice').textContent = price + ' USD';
+      
+      // Modal'ı göster
+      document.getElementById('paymentModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePaymentModal() {
+      document.getElementById('paymentModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Modal dışına tıklandığında kapat
+    document.getElementById('paymentModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closePaymentModal();
+      }
+    });
+
+    function processPayment() {
+      // Ödeme modal'ını gizle
+      document.getElementById('paymentModal').style.display = 'none';
+      
+      // Yüklenme ekranını göster
+      document.getElementById('loadingScreen').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      
+      // 3 saniye sonra başarı ekranını göster
+      setTimeout(function() {
+        document.getElementById('loadingScreen').style.display = 'none';
+        
+        // Başarı ekranındaki bilgileri güncelle
+        if (selectedPackage) {
+          const playerId = document.getElementById('playerId').value || 'Yash22976';
+          document.getElementById('successPlayerId').textContent = playerId;
+          document.getElementById('successAmount').textContent = selectedPackage.amount + ' + ' + selectedPackage.bonus + ' UC';
+          document.getElementById('successPrice').textContent = selectedPackage.price + ' USD';
+        }
+        
+        // Başarı ekranını göster
+        document.getElementById('successScreen').style.display = 'flex';
+      }, 3000);
+    }
+
+    function closeAllModals() {
+      document.getElementById('paymentModal').style.display = 'none';
+      document.getElementById('loadingScreen').style.display = 'none';
+      document.getElementById('successScreen').style.display = 'none';
+      document.body.style.overflow = 'auto';
+      
+      // Seçili paketi temizle
+      const packageItems = document.querySelectorAll('.item');
+      packageItems.forEach(pkg => pkg.classList.remove('selected'));
+      selectedPackage = null;
+    }
+  </script>
+
+</body>
+</html>
